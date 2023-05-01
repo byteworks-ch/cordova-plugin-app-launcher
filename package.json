@@ -1,0 +1,48 @@
+{
+  "name": "cordova-plugin-app-launcher",
+  "version": "0.0.1",
+  "description": "This plugin for Cordova allows you to check if an app is installed and open it. It requires an URI Scheme (iOS) or a Package Name (Android).",
+  "cordova": {
+    "id": "cordova-plugin-app-launcher",
+    "platforms": [
+      "ios",
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/byteworks-ch/cordova-plugin-app-launcher.git"
+  },
+  "keywords": [
+    "Cordova",
+    "plugin",
+    "app",
+    "check",
+    "launch",
+    "installed",
+    "URIScheme",
+    "URI",
+    "Scheme",
+    "PackageName",
+    "Package",
+    "Name",
+    "iOS",
+    "Android",
+    "cordova-ios",
+    "cordova-android"
+  ],
+  "engines": {
+    "cordovaDependencies": {
+      "0.0.1": {
+        "cordova-android": ">=9.0.0",
+        "cordova-ios": ">=6.0.0",
+        "cordova": ">=9.0.0"
+      }
+    }
+  },
+  "license": "GPL",
+  "bugs": {
+    "url": "https://github.com/byteworks-ch/cordova-plugin-app-launcher/issues"
+  },
+  "homepage": "https://github.com/byteworks-ch/cordova-plugin-app-launcher"
+}

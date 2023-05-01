@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        id="cordova-plugin-app-launcher"
+        version="0.0.1">
+    
+    <name>App Launcher</name>
+    
+    <description>This plugin for Cordova allows you to check if an app is installed and open it. It requires an URI Scheme (iOS) or a Package Name (Android).</description>
+    
+    <keywords>Cordova,plugin,app,check,launch,installed, URIScheme,URI,Scheme,PackageName,Package,Name,iOS,Android</keywords>
+    
+    <repo>https://github.com/byteworks-ch/cordova-plugin-app-launcher.git</repo>
+    <issue>https://github.com/byteworks-ch/cordova-plugin-app-launcher/issues</issue>
+    
+    <license>GPL</license>
+    
+    <engines>
+        <engine name="cordova" version=">=3.0.0" />
+    </engines>
+    
+    <js-module src="www/AppLauncher.js" name="AppLauncher">
+        <clobbers target="AppLauncher" />
+    </js-module>
+    
+    <!-- iOS -->
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="AppLauncher">
+                <param name="ios-package" value="AppLauncher" />
+            </feature>
+        </config-file>
+        
+        <header-file src="src/ios/AppLauncher.h" />
+        <source-file src="src/ios/AppLauncher.m" />
+    </platform>
+    
+    <!-- Android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="AppLauncher">
+                <param name="android-package" value="ch.byteworks.cordova.AppLauncher" />
+            </feature>
+        </config-file>
+        
+        <source-file src="src/android/AppLauncher.java" target-dir="src/ch/byteworks/AppLauncher/" />
+    </platform>
+    
+</plugin>
